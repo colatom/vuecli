@@ -1,7 +1,12 @@
 <template>
-  <div>    
+  <div>   
       <nav class="navbar navbar-expand-lg  navbar-light fixed-top bg-light p-0 shadow">
-        <router-link class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" to="/"><h4><i class="fas fa-dog"></i>可樂公仔店</h4></router-link>  
+        <button class="navbar-toggler d-sm-none linkbtn" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <router-link class="navbar-brand col-sm-3 mr-0 text-center linkhome" to="/">          
+          <h4><i class="fas fa-dog"></i>可樂公仔店</h4>      
+        </router-link>  
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <ul class="navbar-nav nav">            
             <li>
@@ -18,8 +23,7 @@
               <div class="h5 text-center">
                 <a class="nav-link" href="#" @click.prevent="login">後臺管理</a>
               </div>
-            </li>
-            
+            </li>            
           </ul>
         </div>
       </nav>
@@ -45,3 +49,15 @@ export default {
   }  
 }
 </script>
+
+<style>
+@media screen and (max-width: 768px){
+  .linkbtn{
+    width: 15%
+  }
+  .linkhome{
+    width: 85%
+  }
+}
+  
+</style>

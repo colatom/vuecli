@@ -13,7 +13,16 @@
         <div class="row" v-if="cart.final_total">            
             <div class="col-md-8 offset-md-2">
                 <div>
-                    <div class="mt-5 text-center">
+                    <div class=" mt-5 text-center d-sm-none">
+                        <ul>
+                            <li class="rounded p-2 bg-secondary text-white"><h5>1.確認商品</h5></li>
+                            <li class="d-block "><i class="fas fa-arrow-down fa-2x text-secondary"></i></li>
+                            <li class="rounded p-2 bg-secondary text-white"><h5>2.輸入資訊</h5></li>
+                            <li class="d-block"><i class="fas fa-arrow-down fa-2x text-secondary"></i></li>
+                            <li class="rounded p-2 bg-secondary text-white"><h5>3.前往付款</h5></li>
+                        </ul>
+                    </div>
+                    <div class="mt-5 text-center d-none d-sm-block">
                         <ul>
                             <li class="d-inline-block p-4 rounded bg-secondary text-white"><h5>1.確認商品</h5></li>
                             <li class="d-inline-block mr-4 ml-4"><i class="fas fa-arrow-right fa-2x text-secondary"></i></li>

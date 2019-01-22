@@ -1,13 +1,22 @@
 <template>
     <div>        
         <div class="my-5 row justify-content-center">
-            <div class="mt-5 text-center">
+            <div class="mt-5 text-center d-sm-none">
+                <ul>
+                    <li class="rounded p-2 bg-success text-white"><h5>1.確認商品<i class="fas fa-check"></i></h5></li>
+                    <li class="d-block"><i class="fas fa-arrow-down fa-2x text-secondary"></i></li>
+                    <li class="rounded p-2 bg-success text-white"><h5>2.輸入資訊<i class="fas fa-check"></i></h5></li>
+                    <li class="d-block"><i class="fas fa-arrow-down fa-2x text-secondary"></i></li>
+                    <li class="rounded p-2 bg-secondary text-white" :class="{'bg-success': order.is_paid}"><h5>3.前往付款<i class="fas fa-check" v-if="order.is_paid"></i></h5></li>
+                </ul>
+            </div>
+            <div class="mt-5 text-center d-none d-sm-block">
                 <ul>
                     <li class="d-inline-block p-4 rounded bg-success text-white"><h5>1.確認商品 <i class="fas fa-check"></i></h5></li>
                     <li class="d-inline-block mr-4 ml-4"><i class="fas fa-arrow-right fa-2x text-success"></i></li>
                     <li class="d-inline-block p-4 rounded bg-success text-white"><h5>2.輸入資訊 <i class="fas fa-check"></i></h5></li>
                     <li class="d-inline-block mr-4 ml-4"><i class="fas fa-arrow-right fa-2x text-success"></i></li>
-                    <li class="d-inline-block p-4 rounded bg-secondary text-white" :class="{'bg-success': order.is_paid}"><h5 v-if="!order.is_paid">3.前往付款</h5><h5 v-if="order.is_paid">付款完成 <i class="fas fa-check" ></i></h5></li>
+                    <li class="d-inline-block p-4 rounded bg-secondary text-white" :class="{'bg-success': order.is_paid}"><h5>3.付款完成<i class="fas fa-check" v-if="order.is_paid"></i></h5></li>
                 </ul>
             </div>
         <form class="col-md-6" @submit.prevent="payOrder">

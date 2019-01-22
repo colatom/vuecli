@@ -4,7 +4,7 @@
     
     <div class="container-fluid">
       <div class="row">                
-        <div class="col-md-12 ml-sm-auto col-lg-12 px-4 mt-5">
+        <div class="col-md-12 mt-5">
           <router-view></router-view>
         </div>
       </div>

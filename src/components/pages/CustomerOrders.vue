@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="row col-md-9 ml-sm-auto col-lg-9 px-4">
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 procenter">
             <div class="input-group-prepend">
                 <input type="text" class="form-control" placeholder="請輸入" v-model="find" @keyup.enter="filterPro">
             </div>
@@ -51,12 +51,26 @@
             </div>
         </div>      
         </div>
+        <button type="button" id="BackTop" class="toTop-arrow"></button>
     </div>
 </template>
 
 <script>
 import $ from 'jquery';
 import Carousel from '../Carousel';
+
+$(function(){
+	$('#BackTop').click(function(){ 
+		$('html,body').animate({scrollTop:0}, 333);
+	});
+	$(window).scroll(function() {
+		if ( $(this).scrollTop() > 300 ){
+			$('#BackTop').fadeIn(222);
+		} else {
+			$('#BackTop').stop().fadeOut(222);
+		}
+	}).scroll();
+});
 
 export default {
     components:{
@@ -189,9 +203,47 @@ export default {
 </script>
 
 <style scoped>
+    @media screen and (max-width: 768px){
+        .procenter{            
+            justify-content: center;
+        }
+    }   
+
     .limit-text{
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap
     }
+    .toTop-arrow {
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        border-radius: 33%;
+        opacity: 0.6;
+        background: #000;
+        cursor: pointer;
+        position:fixed;
+        right: 1rem;
+        bottom: 1rem;
+        display: none;
+    }
+    .toTop-arrow::before, .toTop-arrow::after {
+        width: 25px;
+        height: 6px;
+        border-radius: 3px;
+        background: #f90;
+        position: absolute;
+        content: "";
+    }
+    .toTop-arrow::before {
+        transform: rotate(-45deg) translate(0, -50%);
+        left: 0.42rem;
+    }
+    .toTop-arrow::after {
+        transform: rotate(45deg) translate(0, -50%);
+        right: 0.42rem;
+    }
+    .toTop-arrow:focus {outline: none;}
 </style>

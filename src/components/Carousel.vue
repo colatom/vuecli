@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="carouselmhw" class="carousel slide" data-ride="carousel">
+        <div id="carouselmhw" class="carousel slide d-none d-sm-block" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselmhw" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselmhw" data-slide-to="1"></li>

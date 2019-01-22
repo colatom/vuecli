@@ -2,10 +2,10 @@
     <div>
         <div class="container mt-5 mb-5">
             <div class="row mt-5">
-                <div class="col-md-8">
+                <div class="col-md-8 mb-2">
                     <img :src="product.imageUrl" class="img-fluid rounded"  alt="">
                 </div>
-                <div class="col-md-4 bg-dark">
+                <div class="col-md-4 bg-dark rounded">
                     <h2 class="text-white text-center">{{product.title}}</h2>
                     <h4><div class="text-right text-white"> {{product.category}}</div></h4>                    
                     <h6 class="my-4 text-white">{{product.content}}</h6>

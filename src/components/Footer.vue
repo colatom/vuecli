@@ -1,11 +1,11 @@
 <template>
-    <div class="footer-color p-1">
+    <div class="footer-color p-1 mt-3">
         <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-4 offset-md-2 text-right">
-                    <h5>© Copright 2019</h5>
+            <div class="row mt-5 ">
+                <div class="col-md-6 footer-text">
+                    <h5>© Copyright 2019</h5>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 footer-link">
                     <a href="" class="d-inline-block"><h5><i class="fab fa-instagram"></i>Instagram</h5></a>
                     <a href="" class="d-inline-block"><h5><i class="fab fa-facebook"></i>Facebook</h5></a>
                 </div>
@@ -22,5 +22,19 @@ $light-blue:#66FFFF;
 
 .footer-color{
     background: $light-blue;
+}
+.footer-text{
+    text-align: right;
+}
+.footer-link{
+    text-align: left;
+}
+@media screen and (max-width: 768px){
+    .footer-text{
+        text-align: center;
+    }
+    .footer-link{
+        text-align: center;
+    }
 }
 </style>
